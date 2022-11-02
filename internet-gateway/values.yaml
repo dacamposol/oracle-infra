@@ -1,0 +1,8 @@
+nginx:
+  controller:
+    ingressClassResource:
+      name: external-tools
+    service:
+      type: LoadBalancer
+      annotations:
+        oci.oraclecloud.com/load-balancer-type: "lb"
