@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: argocd-server
+  namespace: argocd
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.nginx.controller.ingressClassResource }}
+    cert-manager.io/cluster-issuer: {{ .Release.Name }}
+spec:
+  rules:
+    - host: argo.k8s.dacamposol.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: argocd-server
+              servicePort: 80
+  tls:
+    - hosts:
+      - argo.k8s.dacamposol.com
