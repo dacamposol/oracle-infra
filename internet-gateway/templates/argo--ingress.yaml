@@ -4,7 +4,7 @@ metadata:
   name: argocd-server
   namespace: argocd
   annotations:
-    cert-manager.io/issuer: "{{ .Release.Name }}"
+    cert-manager.io/cluster-issuer: "{{ .Release.Name }}"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
