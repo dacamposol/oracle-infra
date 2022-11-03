@@ -7,6 +7,10 @@ metadata:
     kubernetes.io/ingress.class: "{{ .Values.nginx.controller.ingressClassResource }}"
     cert-manager.io/issuer: "{{ .Release.Name }}"
 spec:
+  tls:
+  - hosts:
+    - argo.k8s.dacamposol.com
+    secretName: argocd-server-tls
   rules:
   - host: "argo.k8s.dacamposol.com"
     http:
