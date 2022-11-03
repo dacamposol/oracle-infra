@@ -12,7 +12,7 @@ spec:
     - argo.k8s.dacamposol.com
     secretName: argocd-server-tls
   rules:
-  - host: "argo.k8s.dacamposol.com"
+  - host: argo.k8s.dacamposol.com
     http:
       paths:
       - pathType: Prefix
@@ -21,4 +21,4 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 80
+              name: https
