@@ -8,11 +8,11 @@ metadata:
     cert-manager.io/issuer: "{{ .Release.Name }}"
 spec:
   rules:
-  - host: "argo.bar.com"
+  - host: "argo.k8s.dacamposol.com"
     http:
       paths:
       - pathType: Prefix
-        path: "/bar"
+        path: "/"
         backend:
           service:
             name: argocd-server
