@@ -9,6 +9,6 @@ spec:
     privateKeySecretRef:
       name: {{ .Release.Name }}
     solvers:
-    - http-01:
+    - http01:
         ingress:
           class: {{ .Values.nginx.controller.ingressClassResource }}
