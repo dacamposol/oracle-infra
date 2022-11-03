@@ -4,7 +4,7 @@ metadata:
   name: argocd-server
   namespace: argocd
   annotations:
-1    cert-manager.io/issuer: "{{ .Release.Name }}"
+    cert-manager.io/issuer: "{{ .Release.Name }}"
 spec:
   ingressClassName: "{{ .Values.nginx.controller.ingressClassResource.name }}"
   tls:
