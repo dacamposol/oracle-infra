@@ -4,9 +4,9 @@ metadata:
   name: argocd-server
   namespace: argocd
   annotations:
-    kubernetes.io/ingress.class: "{{ .Values.nginx.controller.ingressClassResource }}"
-    cert-manager.io/issuer: "{{ .Release.Name }}"
+1    cert-manager.io/issuer: "{{ .Release.Name }}"
 spec:
+  ingressClassName: "{{ .Values.nginx.controller.ingressClassResource.name }}"
   tls:
   - hosts:
     - argo.k8s.dacamposol.com
