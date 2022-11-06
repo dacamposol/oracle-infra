@@ -4,7 +4,7 @@ nginx:
       name: internet-gateway
     service:
       type: LoadBalancer
-      loadBalancerIP: "130.162.251.204"
+      loadBalancerIP: "138.2.150.115"
       annotations:
         oci.oraclecloud.com/load-balancer-type: "lb"
         service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
