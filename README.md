@@ -2,9 +2,9 @@
 
 This repository contains all the applications which are deployed in the cluster by ArgoCD.
 
-| Application | Description |
-| ----------- | ----------- |
-| apps-infra | Application composed of all the other Applications which conform the infrastructure-required applications |
+| Application      | Description                                                                                                     |
+|------------------|-----------------------------------------------------------------------------------------------------------------|
+| apps-infra       | Application composed of all the other Applications which conform the infrastructure-required applications       |
 | internet-gateway | An IngressNginx application which exposes cluster resources to internet through an IngressController as gateway |
 
 ## Author
